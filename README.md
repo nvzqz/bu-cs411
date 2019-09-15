@@ -3,8 +3,10 @@
 This repository contains the work on a group project for Boston University's
 CS 411 course.
 
-Authors:
+## Team Pugs
+
+Members:
 - Nikolai Vazquez
-- Yu Liu
+- Yu Liu, a.k.a. "Felix"
 - Mingzhe Huang
-- Ishmael Perez
+- Ishmael Perez, a.k.a. "Ish" (like "fish")
