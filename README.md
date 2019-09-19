@@ -8,5 +8,5 @@ CS 411 course.
 Members:
 - Nikolai Vazquez
 - Yu Liu, a.k.a. "Felix"
-- Mingzhe Huang
+- Mingzhe Huang, a.k.a "Peter"
 - Ishmael Perez, a.k.a. "Ish" (like "fish")
