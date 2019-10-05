@@ -31,3 +31,7 @@
 3. As a user, I only want to listen to the songs that are recently added by me.
 
 > This story is about filtering out the old songs only keeping the songs added after a given date.
+
+4. As a user, I want to listen to specific kind of music at specific time, such as light music when it's raining. So I want the app to calculate the "mood" of my playlist
+
+> This story is about categorizing playlists based on the types of songs.
