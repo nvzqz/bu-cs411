@@ -5,16 +5,14 @@ CS 411 course.
 
 ## Proposal
 
-Go Wherever: Upload a photo and get an instant itinerary.
+Spotitunes: Transfer your playlists between Spotify and Apple Music.
 
-When the user uploads a photo to Go Wherever, a location recognizer attempts to find where the photo was taken. It will use the Wikipedia API to find info on places in the area and then find local hotels and costs via Expedia's API.
+Spotitunes leverages the Spotify and Apple Music APIs to allow users to select any public playlist from your account in one service and duplicate it in the other. The user pastes a link to their public playlist into Spotitunes and it will then automagically recreate it in the other music service.
 
 APIs used:
 
-Wikipedia
-BookingSync
-Expedia
-Google Cloud Vision
+Spotify
+Apple Music
 
 ## Team Pugs
 
