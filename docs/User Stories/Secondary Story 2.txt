@@ -1,0 +1,3 @@
+As a user who always looking for new songs, I hope the app can recommend me some new artists based on my playlist.
+
+This story is about making recommendations about new songs based on the playlist given.

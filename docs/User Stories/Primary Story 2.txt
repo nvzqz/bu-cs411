@@ -1,0 +1,4 @@
+
+As a Spotify/Apple Music user, sometimes I saw some wonderful playlist on Apple Music/Spotify but I don’t want to pay for two services at the same time. So I want to use the app to transfer the playlist to Spotify/Apple Music then I can listen to it.
+
+This story is about when user found contents in other service is interesting, he/she can use this app to copy the playlist to his/her account
