@@ -1,3 +1,0 @@
-As a user, when I found a playlist I really like but there are some artists I don’t prefer, I want the songs of those artists to be filtered. So I can listen to the rest of the playlist without pressing the “next” button.
-
-This story is about filtering out the songs by the artists who the user don't like.
