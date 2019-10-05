@@ -1,0 +1,3 @@
+As a user who just switched to Spotify/Apple Music, I want to transfer all my playlist to the new service automatically, if i have to do it song by song, the experience will be different.
+
+This story covers the case a user want to switch to another service so he/she can use the app to copy all the playlists he/she had to the new account.
