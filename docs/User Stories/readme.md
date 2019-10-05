@@ -11,7 +11,7 @@
 
 3.  As a user of both services, I want to synchronize my playlists between accounts kept on Spotify and Apple Music. So they are both up to date.
 
-> This story is about the function of keeping playlists in accounts in two service synchronized. 
+> This story is about the function of keeping playlists in two accounts of services synchronized. 
 
 4. 
 
