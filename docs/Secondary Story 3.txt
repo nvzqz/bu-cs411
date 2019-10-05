@@ -1,3 +1,0 @@
-As a user, I only want to listen to the songs that are recently added by me.
-
-This story is about filtering out the old songs only keeping the songs added after a given date.
