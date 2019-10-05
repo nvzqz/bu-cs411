@@ -13,7 +13,10 @@
 
 > This story is about the function of keeping playlists in two accounts of services synchronized. 
 
-4. 
+4. As a user of Apple Music, I wnat the playlist to be sorted in the  I like, bwayut Apple Music doesn't support this feature. So I would like to use this app to sort my playlists in different orders.
+
+> This story talks about the feature of sorting the playlist in the way the users prefered.
+
 
 ## Secondary Stories
 
