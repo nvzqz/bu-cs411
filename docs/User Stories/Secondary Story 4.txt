@@ -1,0 +1,3 @@
+ As a user, I want to listen to specific kind of music at specific time, such as light music when it's raining. So I want the app to calculate the "mood" of my playlist
+
+This story is about categorizing playlists based on the types of songs.
