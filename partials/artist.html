@@ -1,0 +1,49 @@
+<header>
+	<!-- <div class="cover">
+	</div> -->
+
+	<h4>ARTIST</h4>
+</header>
+
+<hr/>
+<br/>
+
+<h3>Popular tracks</h3>
+<table class="tracks">
+	<thead>
+		<th>#</th>
+		<th></th>
+		<th>SONG</th>
+		<th>ALBUM</th>
+		<th>TIME</th>
+	</thead>
+</table>
+
+<hr/>
+<br/>
+
+<div ng-show="albums.length > 0">
+	<h3>Albums</h3>
+	<ul class="albums">
+		<li ng-repeat="t in albums">
+			<p>
+				<b><a href="#/albums/{{t.id}}">{{t.name}}</a></b>
+			</p>
+		</li>
+	</ul>
+	<hr/>
+	<br/>
+</div>
+
+<div ng-show="singles.length > 0">
+	<h3>Singles</h3>
+	<ul class="albums">
+		<li ng-repeat="t in singles">
+			<p>
+				<b><a href="#/albums/{{t.id}}">{{t.name}}</a></b>
+			</p>
+		</li>
+	</ul>
+	<hr/>
+	<br/>
+</div>
