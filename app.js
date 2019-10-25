@@ -6,7 +6,7 @@
     $routeProvider.
       when('/search', {
         templateUrl:'partials/searchResult.html',
-        controller: 'SearchResultController'
+        controller: 'SearchResultsController'
       }).otherwise({
         redirectTo:'/'
       });
@@ -54,6 +54,14 @@
         $scope.showplayer = false;
         $scope.showlogin = true;
       });
+
+      $scope.getClass = function(path) {
+        if ($location.path().substr(0, path.length) == path) {
+          return 'active';
+        } else {
+          return '';
+        }
+      };
 
       checkUser();
   });
