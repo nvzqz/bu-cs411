@@ -5,15 +5,13 @@ CS 411 course.
 
 ## Usage
 
-    $ install npm
-
-    $ bower install anguler-route
-
 set up local server by
 
     $ python -m SimpleHTTPServer 8888
   
 ps: dont change to other port, because the callback url is added to the spotify whitelist.
+
+Open a brower (I use Safari) paste the link address.
 
 ## Known bugs
 
