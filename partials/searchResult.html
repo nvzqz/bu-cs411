@@ -6,7 +6,7 @@
 <ul class="playlists" ng-show="playlists.length > 0">
 	<h4>PLAYLISTS</h4>
   <li class="searchresult" ng-repeat="p in playlists">
-		<!-- add covers later -->
+		<!-- should get covers or something else I didnt implement the js file to get those info -->
     <p>
       <a href="#/users/{{p.owner.id}}/playlists/{{p.id}}">{{p.name}}</a>
     </p>
@@ -22,7 +22,6 @@
 		<th>ARTIST</th>
 		<th>ALBUM</th>
 		<th>TIME</th>
-		<th>POPULARITY</th>
 	</thead>
 	<tbody>
 		<tr ng-repeat="t in tracks" ng-class="{ playing: (t.uri == currenttrack) }">
@@ -31,15 +30,6 @@
 			</td>
 			<td>
 				<a href="#/albums/{{t.album.id}}">{{t.album.name}}</a>
-			</td>
-			<td class="nowrap">
-				{{ t.duration_ms | displaytime }}
-			</td>
-			<td>
-				<div class="pop-meter">
-					<div class="pop-meter-background"></div>
-					<div class="pop-meter-overlay" style="width: {{ t.popularity }}%;"></div>
-				</div>
 			</td>
 		</tr>
 	</tbody>
