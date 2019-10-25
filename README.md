@@ -15,11 +15,13 @@ Open a brower (I use Safari) paste the link address.
 
 ## Known bugs
 
-1. after login, we are redirected back to index.html, but I don't know why the body is hidden
+1. I hided the body section before login. There can be some mechanics to show the it after login
 
 <code>body > div.fullview.searchboxview.<strong>ng-hide</strong></code>
 
-2. once you searched something, you cannot get back to previous page, need to add a button return
+2. User name is not displayed because the user.js file hasnt be implemented
+
+3. Planned to make the login button to be green, but havent wrote the css file.
 
 
 
