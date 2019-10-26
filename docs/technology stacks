@@ -1,5 +1,19 @@
-JavaScript
-Html
-python simplehttpserver
-angular
-Spotify web API
+# Tech Stack  
+We decided to use the LAMP stack because of its relatively easy and cheap setup in addition to 
+our familiarity with the stack's languages/frameworks.  
+
+- Setting up a server on a Linux OS is easy thanks to Amazon Web Services, which is free to university 
+students and saves us personal expenses.  
+- An Apache server is very easy to set up and run from anywhere. Its documentation is extensive which 
+helps us complete the probject.  
+- MySQL is used across several popular services e.g. Facebook and its wide us has led to a wealth of 
+documentation being generated. It is also a relational database system, which is perfect for our need 
+to connect objects easily (e.g. user with his/her playlists).  
+- Python is familiar to all of us through our BU educations and is also very simple to read, and libraries 
+abound for completing actions we need to perform.  
+
+Other tech stacks were either too unfamiliar (which meant a high learning curve, e.g. MEAN's heavy dependence 
+on Javascript-based frameworks) or too costly.  
+
+For our front-end components, we chose the standard HTML/CSS basic structuring/design with Javascript for queries 
+to/from the server. This is all this is needed to connect with the Spotify web API.  
