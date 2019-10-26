@@ -1,6 +1,8 @@
 # Tech Stack  
 We decided to use the LAMP stack because of its relatively easy and cheap setup in addition to 
-our familiarity with the stack's languages/frameworks.  
+our familiarity with the stack's languages/frameworks. Its components are easily swapped/replaced as well, 
+as shown in its ability to swap PHP with Python or Perl, which helps in case our back-end language needs 
+to change.  
 
 - Setting up a server on a Linux OS is easy thanks to Amazon Web Services, which is free to university 
 students and saves us personal expenses.  
@@ -8,12 +10,13 @@ students and saves us personal expenses.
 helps us complete the probject.  
 - MySQL is used across several popular services e.g. Facebook and its wide us has led to a wealth of 
 documentation being generated. It is also a relational database system, which is perfect for our need 
-to connect objects easily (e.g. user with his/her playlists).  
+to link objects easily (e.g. user with his/her playlists).  
 - Python is familiar to all of us through our BU educations and is also very simple to read, and libraries 
 abound for completing actions we need to perform.  
 
 Other tech stacks were either too unfamiliar (which meant a high learning curve, e.g. MEAN's heavy dependence 
-on Javascript-based frameworks) or too costly.  
+on Javascript-based frameworks) or too costly (e.g. WISA's costs for Microsoft product licenses, which is 
+inappropriate for a small-scale project like this).  
 
 For our front-end components, we chose the standard HTML/CSS basic structuring/design with Javascript for queries 
 to/from the server. This is all this is needed to connect with the Spotify web API.  
