@@ -1,0 +1,21 @@
+This is the Happy Path and possible exceptions for Primary Story 1:
+As a user who just switched to Spotify/Apple Music, I want to transfer all my playlists to the new service automatically. If I have to do it song by song, the experience will be time-consuming and mundane.
+
+Happy path:
+1. Direct user to the Spotify page for login
+2. Display playlists and transfer button for user to choose for transfer
+3. Start transferring the playlist from Spotify to Apple Music 
+   once user pressed the transfer button
+4. Notify user when the transfer is complete
+
+Exceptions: 
+1. Spotify login failure
+2. No playlists found in user's library
+3. No songs found in the selected playlist
+4. No songs found in Apple Music
+
+Step(s) to cause Exceptions:
+1. Enter the wrong User ID/Email Address or Password
+2. Login into Spotify -> Having an empty library in Spotify
+3. Login into Spotify -> Select an empty playlist
+4. Login into Spotify -> Select a playlist with all of its songs not offered by Apple Music
