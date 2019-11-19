@@ -15,13 +15,7 @@ Open a brower (I use Safari) paste the link address.
 
 ## Known bugs
 
-1. I hided the body section before login. There can be some mechanics to show the it after login
-
-<code>body > div.fullview.searchboxview.<strong>ng-hide</strong></code>
-
-2. User name is not displayed because the user.js file hasnt be implemented
-
-3. Planned to make the login button to be green, but havent wrote the css file.
+1. Planned to make the login button to be green, but havent wrote the css file.
 
 
 
