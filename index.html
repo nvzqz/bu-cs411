@@ -1,6 +1,7 @@
 <html ng-app="spoti">
 	<head>
 		<title>Spotify Search API</title>
+		<!-- <link rel="stylesheet" href="style.css" /> -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
 		<script src="bower_components/angular/angular.js"></script>
 		<script src="bower_components/angular-route/angular-route.js"></script>
@@ -13,10 +14,10 @@
 	</head>
 
 	<body ng-controller="AppController">
-		<div class="fullview searchboxview" ng-show="showsearchbox">
+		<div class="fullview searchboxview" >
 			<div ng-controller="MainController">
 				<div class="topgroup">
-					<div class="searchbox">
+					<div class="searchbox" >
 						<input type="text" ng-model="query" ng-change="loadsearch()" ng-keyup="loadsearch()" placeholder="Search..." />
 					</div>
 					<div class="titlebox">
@@ -43,7 +44,7 @@
 						<p>
 							Login to search in Spotify.
 						</p>
-						<a ng-click="login()" class="button big green">login</a>
+						<a ng-click="login()" class="button">login</a>
 					</div>
 				</div>
 			</div>

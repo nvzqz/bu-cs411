@@ -3,8 +3,8 @@
   var module = angular.module('spoti');
 
   module.factory('Auth', function() {
-    var CLIENT_ID = '';
-    var REDIRECT_URI = '';
+    // var CLIENT_ID = '';
+    // var REDIRECT_URI = '';
 
     CLIENT_ID =	'10bdf8e085b849cd8bf1c9a9e6263be7';
     REDIRECT_URI = 'http://localhost:8888/callback.html';

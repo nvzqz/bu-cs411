@@ -22,21 +22,24 @@
   				});
   				return ret.promise;
   			},
-        getMe: function() {
-          var ret = $q.defer();
-          $http.get(baseUrl + '/me', {
-            headers: {
-              'Authorization': 'Bearer ' + Auth.getAccessToken()
-              }
-          }).success(function(r) {
-            console.log('success, userinfo got', r);
-            ret.resolve(r);
-          }).error(function(err) {
-            console.log('fail, no userinfo got', err);
-            ret.reject(err);
-          });
-            return ret.promise;
-        },
+        getMyUsername: function() {
+  				var ret = $q.defer();
+  				$http.get(baseUrl + '/me', {
+  					headers: {
+  						'Authorization': 'Bearer ' + Auth.getAccessToken()
+  					}
+  				}).success(function(r) {
+  					console.log('got userinfo', r);
+  					ret.resolve(r.id);
+  					// ret.resolve('test_1');
+  				}).error(function(err) {
+  					console.log('failed to get userinfo', err);
+  					ret.reject(err);
+  					//
+  					// ret.resolve('test_1');
+  				});
+  				return ret.promise;
+  			},
 
         getSearchResults: function(query) {
           var ret = $q.defer();
@@ -49,6 +52,24 @@
             ret.resolve(r);
           });
             return ret.promise;
+        },
+
+        getUser: function(username) {
+          var ret = $q.defer();
+          $http.get(baseUrl + '/users/' +
+            encodeURIComponent(username),
+          {
+            headers: {
+              'Authorization': 'Bearer ' + Auth.getAccessToken()
+            }
+          }).success(function(r) {
+            console.log('got userinfo', r);
+            ret.resolve(r);
+          }).error(function(err) {
+            console.log('failed to get userinfo', err);
+            ret.reject(err);
+          });
+          return ret.promise;
         },
       };
     });

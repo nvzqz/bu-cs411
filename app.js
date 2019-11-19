@@ -7,7 +7,12 @@
       when('/search', {
         templateUrl:'partials/searchResult.html',
         controller: 'SearchResultsController'
-      }).otherwise({
+      }).
+      when('/users/:username', {
+      	templateUrl: 'partials/user.html',
+      	controller: 'UserController'
+      }).
+      otherwise({
         redirectTo:'/'
       });
   });
@@ -41,17 +46,14 @@
       }, false);
 
       $scope.isLoggedIn = (Auth.getAccessToken() != '');
-      $scope.showplayer = $scope.isLoggedIn;
       $scope.showlogin = !$scope.isLoggedIn;
 
       $scope.$on('login', function() {
-        $scope.showplayer = true;
         $scope.showlogin = false;
         $location.path('/').replace().reload();
       });
 
       $scope.$on('logout', function() {
-        $scope.showplayer = false;
         $scope.showlogin = true;
       });
 
