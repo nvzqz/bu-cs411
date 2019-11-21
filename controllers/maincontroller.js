@@ -26,7 +26,7 @@
 
 		$rootScope.$on('login', function() {
 			$scope.profileUsername = Auth.getUsername();
-			updatePlaylists();
+			// updatePlaylists();
 		});
 	});
 

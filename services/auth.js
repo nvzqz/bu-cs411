@@ -41,6 +41,7 @@
       },
       getUsername: function() {
         var username = localStorage.getItem('pa_username', '');
+        console.log(username);
         return username;
       },
       setUsername: function(username) {
