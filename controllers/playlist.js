@@ -46,17 +46,6 @@
 			}
 		});
 
-
-		// $scope.playall = function() {
-		// 	var trackuris = $scope.tracks.map(function(track) {
-		// 		return track.track.uri;
-		// 	});
-		// 	PlayQueue.clear();
-		// 	PlayQueue.enqueueList(trackuris);
-		// 	PlayQueue.playFrom(0);
-		// };
-
-
 	});
 
 })();
