@@ -12,6 +12,10 @@
       	templateUrl: 'partials/user.html',
       	controller: 'UserController'
       }).
+      when('/users/:username/playlists/:playlist', {
+        templateUrl: 'partials/playlist.html',
+        controller: 'PlaylistController'
+      }).
       otherwise({
         redirectTo:'/'
       });
@@ -30,12 +34,12 @@
 					$location.replace();
 				}
 			}, function(err) {
-				$scope.showplayer = false;
+				$scope.showmainpage = false;
 				$scope.showlogin = true;
 				$location.replace();
 			});
     }
-
+    
     window.addEventListener("message", function(event) {
       console.log('got postmessage', event);
       var hash = JSON.parse(event.data);
@@ -46,9 +50,12 @@
       }, false);
 
       $scope.isLoggedIn = (Auth.getAccessToken() != '');
-      $scope.showlogin = !$scope.isLoggedIn;
+  		$scope.showmainpage = $scope.isLoggedIn;
+  		$scope.showlogin = !$scope.isLoggedIn;
+
 
       $scope.$on('login', function() {
+        $scope.showmainpage = true;
         $scope.showlogin = false;
         $location.path('/').replace().reload();
       });
