@@ -3,6 +3,7 @@
 	<h4 ng-show="data.collaborative">COLLABORATIVE PLAYLIST</h4>
 	<h4 ng-hide="data.collaborative">PLAYLIST</h4>
 	<h1>{{data.name}}</h1>
+	<button ng-click="exportPlaylist(data.name)">Export</button>
 	<p ng-bind-html="playlistDescription"></p>
 
 </header>
@@ -23,9 +24,9 @@
 		<th ng-if="data.collaborative">USER</th>
 	</thead>
 	<tbody>
-		<tr ng-repeat="t in tracks" ng-class="{ playing: (t.track.uri == currenttrack) }" ng-context-menu="menuOptionsPlaylistTrack(t, $index)">
+		<tr ng-repeat="t in tracks">
 			<td>
-				<a ng-click="play(t.track.uri)">{{t.track.name}}</a>
+				{{t.track.name}}
 			</td>
 			<td>
 				{{t.track.artists[0].name}}

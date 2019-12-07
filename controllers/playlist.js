@@ -26,26 +26,25 @@
 			$scope.tracks = list.items;
 			console.log('tot', tot);
 			$scope.total_duration = tot;
-
-			// find out if they are in the user's collection
-			var ids = $scope.tracks.map(function(track) {
-				return track.track.id;
-			});
-
-			var i, j, temparray, chunk = 20;
-			for (i = 0, j = ids.length; i < j; i += chunk) {
-					temparray = ids.slice(i, i + chunk);
-					var firstIndex = i;
-					(function(firstIndex){
-						API.containsUserTracks(temparray).then(function(results) {
-							results.forEach(function(result, index) {
-								$scope.tracks[firstIndex + index].track.inYourMusic = result;
-							});
-						});
-					})(firstIndex);
-			}
 		});
 
+		$scope.ev_click = function(obj){
+		    var ev = document.createEvent("MouseEvents");
+		    ev.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+		    obj.dispatchEvent(ev);
+		}
+
+		$scope.exportPlaylist = function(name){
+				var data = $scope.tracks.map(function(track) {
+						return [track.track.uri, track.track.name, track.track.artists[0].name, track.track.album.name]+'\n';
+				});
+		    var urlObject = window.URL || window.webkitURL || window;
+		    var export_blob = new Blob([data], {type: "Multipart/form-data"});
+		    var save_link = document.createElementNS("http://www.w3.org/1999/xhtml", "a")
+		    save_link.href = urlObject.createObjectURL(export_blob);
+		    save_link.download = name;
+		    $scope.ev_click(save_link);
+		}
 	});
 
 })();
