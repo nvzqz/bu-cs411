@@ -1,0 +1,50 @@
+<header>
+	<playlist-cover ng-model="data" width="200"></playlist-cover>
+	<h4 ng-show="data.collaborative">COLLABORATIVE PLAYLIST</h4>
+	<h4 ng-hide="data.collaborative">PLAYLIST</h4>
+	<h1>{{data.name}}</h1>
+	<p ng-bind-html="playlistDescription"></p>
+
+</header>
+
+<hr/>
+<p>Created by: <a href="#/users/{{data.owner.id}}">{{data.owner.id}}</a> &middot; {{data.tracks.total}} songs &middot; {{ total_duration | displaytime }}</p>
+<hr/>
+<br/>
+
+<table class="tracks">
+	<thead>
+		<th></th>
+		<th>TRACK</th>
+		<th>ARTIST</th>
+		<th>TIME</th>
+		<th>ALBUM</th>
+		<th>ADDED</th>
+		<th ng-if="data.collaborative">USER</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="t in tracks" ng-class="{ playing: (t.track.uri == currenttrack) }" ng-context-menu="menuOptionsPlaylistTrack(t, $index)">
+			<td>
+				<a ng-click="play(t.track.uri)">{{t.track.name}}</a>
+			</td>
+			<td>
+				{{t.track.artists[0].name}}
+			</td>
+			<td class="nowrap">
+				{{ t.track.duration_ms | displaytime }}
+			</td>
+			<td>
+				{{t.track.album.name}}
+			</td>
+			<td class="nowrap">
+				{{t.added_at | timeago}}
+			</td>
+			<td class="nowrap" ng-if="data.collaborative">
+				<a href="#/users/{{t.added_by.id}}">{{t.added_by.id}}</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+
+<hr/>

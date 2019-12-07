@@ -5,6 +5,26 @@
 	module.controller('MainController', function($scope, $rootScope, Auth, API, $location) {
 		$scope.view = 'welcome';
 		$scope.profileUsername = Auth.getUsername();
+		$scope.playlists = [];
+		$scope.trackdata = null;
+
+		function updatePlaylists() {
+			if ($scope.profileUsername != '') {
+				API.getPlaylists(Auth.getUsername()).then(function(items) {
+					$scope.playlists = items.map(function(pl) {
+						return {
+							id: pl.id,
+							name: pl.name,
+							uri: pl.uri,
+							username: pl.owner.id,
+							collaborative: pl.collaborative,
+							'public': pl['public']
+						};
+					});
+				});
+			}
+		}
+		updatePlaylists();
 
 		$scope.logout = function() {
 			// do login!
@@ -14,9 +34,6 @@
 			$scope.$emit('logout');
 		};
 
-		$scope.showhome = function() {
-			console.log('load home view');
-		};
 		$scope.query = '';
 
 		$scope.loadsearch = function() {

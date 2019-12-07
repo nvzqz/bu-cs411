@@ -9,12 +9,18 @@
 		<script src="services/auth.js"></script>
 		<script src="services/api.js"></script>
 		<script src="controllers/login.js"></script>
+		<script src="controllers/playlist.js"></script>
+		<script src="services/displaytime.js"></script>
+		<script src="services/timeago.js"></script>
 		<script src="controllers/maincontroller.js"></script>
 		<script src="controllers/searchresults.js"></script>
+		<script src="controllers/home.js"></script>
+		<script src="controllers/user.js"></script>
+
 	</head>
 
 	<body ng-controller="AppController">
-		<div class="fullview searchboxview" >
+		<div class="fullview searchboxview" ng-show="showmainpage">
 			<div ng-controller="MainController">
 				<div class="topgroup">
 					<div class="searchbox" >
@@ -30,6 +36,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="midgroup">
 			<div class="mainview">
 				<div ng-view></div>
