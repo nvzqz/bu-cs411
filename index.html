@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html ng-app="spoti">
 	<head>
-		<title>Spotify Search API</title>
-		<!-- <link rel="stylesheet" href="style.css" /> -->
+		<title>SpotifiTunes</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
 		<script src="bower_components/angular/angular.js"></script>
 		<script src="bower_components/angular-route/angular-route.js"></script>
@@ -16,7 +17,22 @@
 		<script src="controllers/searchresults.js"></script>
 		<script src="controllers/home.js"></script>
 		<script src="controllers/user.js"></script>
-
+		<style>
+		.button {
+			display: inline-block;
+			text-align: center;
+			padding: 5px 20px;
+			border-radius: 50px;
+			background-color: #070;
+			color: #fff;
+			font-weight: bold;
+		}
+		a {
+			color: green;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		</style>
 	</head>
 
 	<body ng-controller="AppController">
@@ -31,15 +47,16 @@
 					</div>
 					<div class="userbox">
 						Signed in as <b><a href="#/users/{{profileUsername}}">{{profileUsername}}</a></b>
+						 | 
 						<a ng-click="logout()">Log out</a>
 					</div>
 				</div>
-			</div>
-		</div>
 
-		<div class="midgroup">
-			<div class="mainview">
-				<div ng-view></div>
+				<div class="midgroup">
+						<div class="mainview">
+							<div ng-view></div>
+						</div>
+					</div>
 			</div>
 		</div>
 
@@ -47,11 +64,11 @@
 			<div ng-controller="LoginController">
 				<div class="centered">
 					<div class="inner">
-						<h1>Spotify Search API</h1>
+						<h1>Welcome to SpotifiTunes</h1>
 						<p>
 							Login to search in Spotify.
 						</p>
-						<a ng-click="login()" class="button">login</a>
+						<a ng-click="login()" class="button">Login</a>
 					</div>
 				</div>
 			</div>

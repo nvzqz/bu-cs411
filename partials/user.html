@@ -1,26 +1,34 @@
-<header>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../index.css" type="text/css">
+  </head>
+  <body>
+    <header>
 
-	<h4>USER</h4>
-	<h1>{{data.display_name}}</h1>
+      <h4>USER</h4>
+      <h1>{{data.display_name}}</h1>
 
-</header>
+    </header>
 
-<div ng-show="userplaylists.length > 0">
-  <h2>Public Playlists</h2>
-  <ul class="playlists">
-    <li ng-repeat="t in userplaylists">
-      <p>
-        <b><a href="#/users/{{t.owner.id}}/playlists/{{t.id}}">{{t.name}}</a></b>
-      </p>
-    </li>
-  </ul>
-  <hr/>
-  <br/>
-</div>
-<div ng-show="playlistError !== null">
-	<h2>There was an error retrieving playlists</h2>
-	<div>Please try again later</div>
-</div>
+    <div ng-show="userplaylists.length > 0">
+      <h2>Public Playlists</h2>
+      <ul class="playlists">
+        <li ng-repeat="t in userplaylists">
+          <p>
+            <b><a href="#/users/{{t.owner.id}}/playlists/{{t.id}}">{{t.name}}</a></b>
+          </p>
+        </li>
+      </ul>
+      <hr/>
+      <br/>
+    </div>
+    <div ng-show="playlistError !== null">
+      <h2>There was an error retrieving playlists</h2>
+      <div>Please try again later</div>
+    </div>
+  </body>
+</html>
 
 <!--
 <hr/>
