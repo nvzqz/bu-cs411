@@ -57,6 +57,25 @@
   					ret.reject(err);
   				});
   				return ret.promise; 
+        },
+
+        findTrack: function(query){
+          var ret = $q.defer();
+          // term: key word for searching
+          // limit: number of object(s) returned from search
+          // types: songs/artists/albums/...
+          $http.get(baseUrl + '/catalog/us/search?term=' + encodeURIComponent(query) + '&limit=1&types=songs', {
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          }).success(function(r) {
+            console.log('Track found', r);
+            ret.resolve(r);
+          }).error(function(err) {
+            console.log('Failed to find track', err);
+            ret.reject(err);
+          });
+          return ret.promise;
         }
       };
     });
