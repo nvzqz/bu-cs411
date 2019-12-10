@@ -57,9 +57,9 @@ p {
 }
 
 a {
-	color: inherit;
+	color: green;
 	cursor: pointer;
-	text-decoration: none;
+	font-weight: bold;
 }
 
 b {
@@ -141,31 +141,14 @@ div.centered div.inner {
 	width: 400px;
 }
 
-a.button {
+.button {
 	display: inline-block;
 	text-align: center;
 	padding: 5px 20px;
 	border-radius: 50px;
-}
-
-a.button.green {
 	background-color: #070;
 	color: #fff;
-	border: 1px solid #070;
-}
-
-a.button.big.green {
-	display: inline-block;
-	text-align: center;
-	background-color: #070;
-	color: #fff;
-	padding: 10px 40px;
-	border-radius: 50px;
-}
-
-a.button.button-add {
-	color: #fff;
-	border: 1px solid #070;
+	font-weight: bold;
 }
 
 .pop-meter {
