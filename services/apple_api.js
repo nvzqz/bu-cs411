@@ -32,11 +32,9 @@
   				return ret.promise;
         },
         
-        // one ID needed in url and one ID needed in the http body
-        addTrack: function(urlId, trackId) {
+        addTrack: function(listId, trackId) {
   				var ret = $q.defer();
-          // id needed for songs to be added
-  				$http.post(baseUrl + '/me/library/playlists/' + urlId + '/tracks', {
+  				$http.post(baseUrl + '/me/library/playlists/' + listId + '/tracks', {
             body: {
               'data':[
                 {
